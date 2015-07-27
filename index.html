@@ -7,20 +7,20 @@
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/leaflet.js"></script>
     <script src="js/vendor/angular-leaflet-directive.min.js"></script>
-  
+    <script src="js/vendor/angular-route.js"></script>
+        
   </head>
   <body ng-app="NearMeApp">
     
     <div class="header">
       <div class="container-fluid">
         <h1 class="pull-left">NearMe</h1>
+        <a class="pull-right" href="#/about">About</a>
       </div>
     </div>
 
-    <div class="main" ng-controller="MainController">
-      <div class="container-fluid" id="map-canvas">
-        <leaflet center="mapCenter" markers="mapMarkers"></leaflet>
-      </div>
+    <div class="main">
+      <div ng-view></div>
     </div>
 
     <!-- Modules -->
